@@ -1,5 +1,6 @@
 Selenium 操控 H5 canvas 元素
 ===
+
 <video src="https://i.imgur.com/MDk8i0Z.mp4" width="800" height="600"  controls="controls">
 </video>
 
@@ -37,7 +38,26 @@ python main.py
 ```
 
 
-## 功能介紹
+## selenium_img_find.py def功能介紹
+```img``` 辨識的圖檔
+```img_list``` 辨識的圖片陣列
+```Rtime``` 迴圈次數(預設可不給)
+```J``` 判斷標準 越大越相似越準確(預設可不給)
+```return 0``` 代表完成
+```return 1``` 代表此次未成功
 
-img_Sliding(img, driver, Rtime=10, J=0.7)
+
+```img_Sliding(img, driver, Rtime=10, J=0.7)```
 用於模擬滑鼠或手機按住左滑畫面
+
+```img_single(img_list, driver, Rtime=10, J=0.7)```
+只對單一圖片辨識後點擊
+
+```img_flow(img_list, driver, Rtime=10, J=0.7)```
+一系列動作流程，會在這圖片區間一直做辨識和點擊
+
+```img_return(img_list, driver, Rtime=10, J=0.7)```
+多圖區間,只要辨識到其中一個圖片就點擊離開
+
+```img_wait(img, driver, Rtime=10, J=0.7)```
+只用於等待不做事情
