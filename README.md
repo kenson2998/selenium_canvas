@@ -48,27 +48,27 @@ python main.py
 ```return 1``` 代表此次未成功
 
 
-```python
+```java
 img_Sliding(img, driver, Rtime=10, J=0.7)
 ```
 用於模擬滑鼠或手機按住左滑畫面
 
-```python
+```java
 img_single(img_list, driver, Rtime=10, J=0.7)
 ```
 只對單一圖片辨識後點擊
 
-```python
+```java
 img_flow(img_list, driver, Rtime=10, J=0.7)
 ```
 一系列動作流程，會在這圖片區間一直做辨識和點擊
 
-```python
+```java
 img_return(img_list, driver, Rtime=10, J=0.7)
 ```
 多圖區間,只要辨識到其中一個圖片就點擊離開
 
-```python
+```java
 img_wait(img, driver, Rtime=10, J=0.7)
 ```
 只用於等待不做事情
