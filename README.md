@@ -1,13 +1,5 @@
 Selenium 操控 H5 canvas 元素
 ===
-```HTML
-<video src="https://i.imgur.com/MDk8i0Z.mp4" controls="controls" width="500" height="300"></video>
-```
-```HTML
-<video width="320" height="240" controls>
-    <source src="https://i.imgur.com/MDk8i0Z.mp4" type="video/mp4">
-</video>
-```
 
 
 <video src="https://i.imgur.com/MDk8i0Z.mp4" width="800" height="600"  controls="controls">
@@ -56,17 +48,27 @@ python main.py
 ```return 1``` 代表此次未成功
 
 
-```img_Sliding(img, driver, Rtime=10, J=0.7)```
+```python
+img_Sliding(img, driver, Rtime=10, J=0.7)
+```
 用於模擬滑鼠或手機按住左滑畫面
 
-```img_single(img_list, driver, Rtime=10, J=0.7)```
+```python
+img_single(img_list, driver, Rtime=10, J=0.7)
+```
 只對單一圖片辨識後點擊
 
-```img_flow(img_list, driver, Rtime=10, J=0.7)```
+```python
+img_flow(img_list, driver, Rtime=10, J=0.7)
+```
 一系列動作流程，會在這圖片區間一直做辨識和點擊
 
-```img_return(img_list, driver, Rtime=10, J=0.7)```
+```python
+img_return(img_list, driver, Rtime=10, J=0.7)
+```
 多圖區間,只要辨識到其中一個圖片就點擊離開
 
-```img_wait(img, driver, Rtime=10, J=0.7)```
+```python
+img_wait(img, driver, Rtime=10, J=0.7)
+```
 只用於等待不做事情
