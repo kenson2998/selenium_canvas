@@ -1,6 +1,8 @@
 Selenium 操控 H5 canvas 元素
 ===
-
+```HTML
+<video src="https://i.imgur.com/MDk8i0Z.mp4" controls="controls" width="500" height="300"></video>
+```
 <video src="https://i.imgur.com/MDk8i0Z.mp4" width="800" height="600"  controls="controls">
 </video>
 
