@@ -6,6 +6,7 @@ import requests, sys
 # pip install Pillow
 # pip install selenium
 # pip install requests
+# pip install pytesseract
 # pip install opencv-python
 # time.sleep(5)
 # 滾動滑鼠往左滑
