@@ -13,7 +13,11 @@ class driv_option(webdriver.ChromeOptions):
 
     def get_chrome_path(self):
         import os
-        Dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'chromedriver.exe')
+        if os.name == 'nt':
+            chrome_file = 'chromedriver.exe'
+        else:
+            chrome_file = 'chromedriver'
+        Dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), chrome_file)
         if os.path.exists(Dir):
             # print(f'*chromedriver已找到 :{Dir}')
             return Dir

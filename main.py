@@ -17,12 +17,16 @@ import requests, sys
 if __name__ == '__main__':
     d = openchrome('https://www.google.com.tw/maps')
     img_list = ['師大夜市.png', '樂華夜市.png', '通化夜市.png', '饒河街觀光夜市.png', '公館夜市.png', '南機場夜市.png']
-    pic_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'pic')
+    if os.name == 'nt':
+        pic_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'pic')
+    else:
+        pic_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'mac_pic')
     # 跳轉當判斷用
     if img_wait(os.path.join(pic_dir, 'search0.png'), d, Rtime=5) == 0:
         print('已找到search0.png')
     d.find_element_by_css_selector('#searchboxinput').send_keys('夜市')
-    img_single(os.path.join(pic_dir, 'search1.png'), d, Rtime=5)
+    d.find_element_by_css_selector('#searchboxinput').send_keys(Keys.RETURN)
+    time.sleep(3)
 
     # 找夜市列表
     for img in img_list:
